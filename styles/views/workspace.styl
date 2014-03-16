@@ -1,0 +1,37 @@
+loop-display-size = 200px
+
+.board
+    text-align center
+    margin 20px 0
+
+loop-display(color = color-primary)
+    display inline-block
+    circle(loop-display-size, color)
+    font-size 30px
+    font-weight 100
+
+.loop-display
+    loop-display()
+
+.recorder
+    loop-display(rgba(color-primary, .5))
+    transition background .2s
+
+    &.active
+        background color-red
+
+.stats-bar
+    debullet()
+    text-align center
+    margin-top 40px
+
+    li
+        display inline-block
+        margin 0 20px
+
+    input.signature
+        width 7px
+
+    input.tempo
+        width 25px
+        text-align center

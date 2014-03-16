@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+    head
+        //- Generic
+        meta(charset='UTF-8')
+
+        //- Mobile options
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style', content='orange')
+        meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+
+        //- Styles
+        link(href='/css/styles.css', rel='stylesheet', type='text/css')
+
+        title Beaty
+
+    body
+        header
+            a.logo(href='/'): .inner BEATY
+
+        div.page-width: div#view
+
+        //- App
+        script(src='/js/index.js', type='text/javascript')
+
+        //- Livereload
+        if !production
+            script(src='http://localhost:35729/livereload.js?snipver=1', type='text/javascript')
+
+        script(type='text/javascript').
+            window.CONFIG = { PRODUCTION: #{production} };

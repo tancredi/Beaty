@@ -1,0 +1,54 @@
+page-width()
+    max-width 940px
+    margin-left auto
+    margin-right auto
+
+absolute-cover()
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+
+border-radius(radius = 3px)
+    border-radius radius
+
+bg-inverse()
+    background color-primary
+    color color-white
+
+    h1, h2, h3, h4, h5, h6
+        text-shadow 0 2px rgba(#000, .07)
+        color color-white
+
+        &.ruled
+            border-bottom 1px solid color-ruler-inverse
+
+    hr
+        background color-ruler-inverse
+
+    code
+        background rgba(#fff, .7)
+        color darken(color-primary, 40%)
+
+circle(size = 20px, color = color-primary)
+    text-align center
+    background color
+    width size
+    height size
+    border-radius size
+    line-height size
+
+debullet()
+    list-style none
+    padding-left 0
+
+    li
+        margin 0
+
+block-input()
+    display block
+    width 100%
+    padding-left 0
+    padding-right 0
+    text-align center

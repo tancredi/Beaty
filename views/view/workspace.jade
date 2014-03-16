@@ -1,0 +1,23 @@
+.board
+
+    div(v-component='recorder')
+
+ul.stats-bar
+
+    li
+        strong Tempo: 
+        input.tempo(v-model='tempo', type='text')
+        |  bpm
+
+    li
+        strong Beat:
+        |  {{ beatDisplay }}
+
+    li
+        strong Signature:
+        input.signature(v-model='signature', type='text')
+        |  /4
+
+    li
+        strong Metronome: 
+        a(v-on='click:metronome = !metronome') {{ metronome ? 'On' : 'Off' }}
