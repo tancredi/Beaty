@@ -4,14 +4,21 @@ loop-display-size = 200px
     text-align center
     margin 20px 0
 
+    > div
+        display inline-block
+        margin 20px
+
 loop-display(color = color-primary)
-    display inline-block
     circle(loop-display-size, color)
     font-size 30px
     font-weight 100
     no-select()
 
-.loop-display
+    &:after
+        content ''
+        display inline-block
+
+.loop
     loop-display()
 
 .recorder

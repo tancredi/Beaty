@@ -1,6 +1,6 @@
 .board
-
-    div(v-component='recorder')
+    div(v-component='loop', v-repeat='recordings', v-with='audio: $value, label: $index')
+    div(v-component='recorder', v-with='model: recordings')
 
 ul.stats-bar
 

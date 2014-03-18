@@ -2,11 +2,9 @@
 
   var WORKER_PATH = '/js/vendor/recorder-worker.js';
 
-  var Recorder = function(stream, cfg){
+  var Recorder = function(source, cfg){
     var config = cfg || {};
     var bufferLen = config.bufferLen || 4096;
-    var context = new window.webkitAudioContext();
-    var source = context.createMediaStreamSource(stream);
     this.context = source.context;
     this.node = (this.context.createScriptProcessor ||
                  this.context.createJavaScriptNode).call(this.context,
