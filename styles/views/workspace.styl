@@ -12,6 +12,7 @@ loop-display(color)
     circle(loop-display-size, color)
     font-size 30px
     font-weight 100
+    transition background .2s
     no-select()
 
     &:after
@@ -20,13 +21,29 @@ loop-display(color)
 
 .loop
     loop-display(color-primary)
+    position relative
 
     &.muted
-        loop-display(rgba(color-primary, .2))
+        background rgba(color-primary, .2)
+
+    .waveform
+        absolute-cover()
+        border-radius 100%
+        overflow hidden
+
+        > wave
+            left -50%
+            overflow visible !important
+
+        wave, canvas
+            min-height 100%
+
+    .label
+        position relative
+        z-index 2
 
 .recorder
     loop-display(rgba(color-primary, .5))
-    transition background .2s
 
     &.recording
         background color-red
