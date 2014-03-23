@@ -1,4 +1,4 @@
 div.recorder(v-on='click:recordNext()', v-class='recording: isRecording, preparing: isPreparing')
-    span(v-if='isPreparing') Wait&hellip;
-    span(v-if='isRecording') Recording&hellip;
-    span(v-if='!isRecording && !isPreparing') Record!
+    span.label(v-if='isPreparing') Wait&hellip;
+    span.label(v-if='isRecording') Recording&hellip;
+    span.label(v-if='!isRecording && !isPreparing') Record!

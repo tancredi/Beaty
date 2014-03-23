@@ -13,7 +13,21 @@ loop-display(color)
     font-size 30px
     font-weight 100
     transition background .2s
+    line-height 20px
+    position relative
     no-select()
+
+    .label
+        display inline-block
+        position absolute
+        z-index 5
+        line-height 0
+        width 100%
+        left 0
+        height 30px
+        line-height 30px
+        top 50%
+        margin-top -15px
 
     &:after
         content ''
@@ -21,7 +35,6 @@ loop-display(color)
 
 .loop
     loop-display(color-primary)
-    position relative
 
     &.muted
         background rgba(color-primary, .2)
@@ -39,8 +52,9 @@ loop-display(color)
             min-height 100%
 
     .label
-        position relative
-        z-index 2
+
+        &:focus
+            outline 0
 
     .control
         display inline-block
@@ -50,7 +64,7 @@ loop-display(color)
         line-height 22px
         position absolute
         z-index 3
-        opacity 0
+        // opacity 0
         transition opacity .2s
 
         &.delete
@@ -58,6 +72,26 @@ loop-display(color)
             left 50%
             top -12px
             margin-left -12px
+
+    form
+        position absolute
+        width 100%
+        left 0
+        top 50%
+        margin-top -20px
+        line-height 0
+        z-index 5
+
+        input
+            padding 0
+            background transparent
+            border 0
+            text-align center
+            font-size 30px
+            width 100%
+            color #fff
+            font-family font-body
+            font-weight 100
 
     &:hover .control
         opacity 1
