@@ -8,7 +8,7 @@ loop-display-size = 150px
         display inline-block
         margin 20px
 
-loop-display(color = color-primary)
+loop-display(color)
     circle(loop-display-size, color)
     font-size 30px
     font-weight 100
@@ -19,14 +19,20 @@ loop-display(color = color-primary)
         display inline-block
 
 .loop
-    loop-display()
+    loop-display(color-primary)
+
+    &.muted
+        loop-display(rgba(color-primary, .2))
 
 .recorder
     loop-display(rgba(color-primary, .5))
     transition background .2s
 
-    &.active
+    &.recording
         background color-red
+
+    &.preparing
+        background color-yellow
 
 .stats-bar
     debullet()
