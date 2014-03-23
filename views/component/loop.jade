@@ -1,3 +1,4 @@
-.loop(v-on='click: mute = !mute', v-class='muted: mute')
-    .waveform
+.loop(v-class='muted: mute')
+    .waveform(v-on='click: mute = !mute')
     span.label {{ label }}
+    a.control.delete(v-on='click: remove()') &times;

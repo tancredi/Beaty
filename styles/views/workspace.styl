@@ -42,6 +42,26 @@ loop-display(color)
         position relative
         z-index 2
 
+    .control
+        display inline-block
+        circle 24px
+        color #fff
+        font-size 24px
+        line-height 22px
+        position absolute
+        z-index 3
+        opacity 0
+        transition opacity .2s
+
+        &.delete
+            background color-red
+            left 50%
+            top -12px
+            margin-left -12px
+
+    &:hover .control
+        opacity 1
+
 .recorder
     loop-display(rgba(color-primary, .5))
 
