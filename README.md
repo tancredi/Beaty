@@ -5,8 +5,8 @@
 ![Screenshot](http://oi58.tinypic.com/2n1b0uv.jpg)
 
 ## Warning
+### *!! This repo is unfinished and currently under development. !!*
 
-### ** *** !! This repo is unfinished and currently under development. *** ** !!
 
 ## Setup
 
