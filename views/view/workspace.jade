@@ -1,3 +1,11 @@
+.actions
+
+    .left
+        a.button.circle.load(v-on='click: load()') L
+
+    .right
+        a.button.circle.save(v-on='click: save()') S
+
 .board
     div(v-component='loop', v-repeat='recordings', v-if='!canceled' v-with='loop: $value, index: $index')
     div(v-component='recorder', v-with='model: recordings')

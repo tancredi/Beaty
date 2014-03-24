@@ -36,3 +36,32 @@ section
 
 .right
     float right
+
+.actions
+    margin-top -120px
+    padding-bottom 120px
+
+    .left, .right
+        width 50%
+        box-sizing border-box
+
+    .right
+        padding-left 70px
+
+    .left
+        padding-right 70px
+        text-align right
+
+    .button
+        opacity 0.3
+        transition opacity .2s
+        margin 0 20px
+
+        &:hover
+            opacity 1
+
+        &.load
+            background color-purple
+
+        &.save
+            background color-green
