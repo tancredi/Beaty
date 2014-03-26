@@ -32,7 +32,7 @@
     "cli-color": "~0.2.x",
     "griddy": "0.0.x",
     "gulp-filter": "~0.3.x",
-    "express": "~3.4.8",
+    "express": "~3.4.x",
     "gulp-util": "~2.2.x"
   }
 }
