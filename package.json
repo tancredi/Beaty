@@ -17,8 +17,6 @@
     "superagent": "~0.17.x",
     "routy": "0.0.x",
     "sound-effect-manager": "0.0.x",
-    "npm": "~1.4.x",
-    "install": "~0.1.x",
     "mediastream-gain": "~0.1.x",
     "async": "~0.2.x",
     "wavesurfer.js": "0.0.x",
